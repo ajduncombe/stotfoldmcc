@@ -1,9 +1,9 @@
 // Imports
 import * as React from "react";
-import { Layout } from "../components/layout";
+import Layout from "../components/layout";
 
 // Component
-const AboutPage = () => {
+const AboutPage = ({ location }) => {
   return (
     <Layout pageTitle="About SMCC">
       <p>Text to be added here.</p>

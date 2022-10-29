@@ -1,9 +1,9 @@
 // Imports
 import * as React from "react";
-import { Layout } from "../components/layout";
+import Layout from "../components/layout";
 
 // Component
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
     <Layout pageTitle="Welcome to SMCC">
       <p>Text to be added here.</p>
