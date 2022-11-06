@@ -3,5 +3,5 @@ module.exports = {
     title: `stotfoldmcc`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [`gatsby-theme-material-ui`],
+  plugins: [`gatsby-plugin-postcss`, `gatsby-theme-material-ui`],
 };
