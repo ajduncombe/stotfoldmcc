@@ -1,34 +1,28 @@
 // Imports
 import * as React from "react";
-import { container, heading } from "./layout.module.css";
-import { Button, Stack } from "@mui/material";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
 
 // Component
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className={container}>
-      <nav>
-        <Stack direction="row" spacing={2}>
-          <Button href="/" disabled={location.pathname === "/" && true}>
-            Home
-          </Button>
-          <Button
-            href="/about"
-            disabled={location.pathname === "/about" && true}
+    <div className="m-auto max-w-screen-md font-sans">
+      <nav className="flex space-x-4 rounded-md bg-green-200 sm:justify-center">
+        {[
+          ["Home", "/"],
+          ["About", "/about"],
+        ].map(([title, path]) => (
+          <button
+            className="mx-1 p-2 transition-colors duration-500 hover:bg-green-500 disabled:bg-gray-500 disabled:text-white"
+            disabled={location.pathname === path && true}
           >
-            About
-          </Button>
-        </Stack>
+            {location.pathname === path ? title : <a href={path}>{title}</a>}
+          </button>
+        ))}
       </nav>
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        <h1 className="text-[rebeccapurple]">{pageTitle}</h1>
         {children}
       </main>
-      <footer>
+      <footer className="rounded-md bg-gray-200 p-1 text-right text-sm">
         Copyright &copy; {new Date().getFullYear()} Stotfold Model Car Club
       </footer>
     </div>
