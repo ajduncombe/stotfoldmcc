@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 const AboutPage = ({ location }) => {
   return (
     <Layout pageTitle="About SMCC">
-      <p>Text to be added here.</p>
+      <p>Under construction.</p>
     </Layout>
   );
 };

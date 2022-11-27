@@ -3,15 +3,15 @@ import * as React from "react";
 import Layout from "../components/layout";
 
 // Component
-const IndexPage = ({ location }) => {
+const NewsPage = ({ location }) => {
   return (
-    <Layout pageTitle="Welcome to SMCC">
+    <Layout pageTitle="News">
       <p>Under construction.</p>
     </Layout>
   );
 };
 
-export const Head = () => <title>SMCC Home Page</title>;
+export const Head = () => <title>SMCC News</title>;
 
 // Export component
-export default IndexPage;
+export default NewsPage;
